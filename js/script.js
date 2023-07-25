@@ -13,38 +13,152 @@ window.onload = function(){
         header.classList.remove("active");
      }
    });
-   //data.json을 로딩
-   const xhttp = new XMLHttpRequest();
-   xhttp.onreadystatechange = function(event){
-    const req = event.target;
-    if(req.readyState ===  XMLHttpRequest.DOME){
-      const str = req.response;
-      // 글자로 온 데이터를 객체로 변환
-      // 글자가 json 규칙대로 만들어진 문자열이다.
-      //그러므로 json 글자를 객체로 변환해서 활용한다.
-      let obj = JSON.parse(str);
+// 콤마 기능
+  function priceToString(price) {
+    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+// data.json을 로딩
+const xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function (event) {
+  const req = event.target;
+  if (req.readyState === XMLHttpRequest.DONE) {
+    const str = req.response;
+    // 글자로 온 테이터를 객체로 변환
+    // 글자가 json 규칙대로 만들어지 문자열이다.
+    // 그러므로 json글자를 객체로 변환해서 활용한다.
+    let obj = JSON.parse(str);
 
-      // 
-      VISUAL_ARR = obj.visual;
-      //비주얼 화면에 배치한다
-      showVisual();
-    }
-   };
-
-   //자료를 호출한다.
-   console.log("자료를 가져온다. XMLHT.....");
-   xhttp.open("GET" , "data.json")
-   //웹브라우저 기능을 실행할 수 있도록 요청
-   xhttp.send();
-
+    //
+    VISUAL_ARR = obj.visual;
+    TODAY_GOOD = obj.todaygood;
+    // 비주얼 화면에 배치한다
+    showVisual();
+    showTodayGood();
+  }
+};
+// 자료를 호출한다.
+console.log("자료를 가져온다. XMLHT.....");
+xhttp.open("GET", "data.json");
+// 웹브라우저 기능을 실행 할수 있도록 요청
+xhttp.send();
+//비주얼
    let VISUAL_ARR;
-   let visualTag = document.getElementById("data-visual")
+   let visualTag = document.getElementById("data-visual");
+   //오늘 상품
+   let TODAY_GOOD;
+   let todayTag = document.getElementById("data-today");
+   let todayTag2 = document.getElementById("data-today2");
+
   //  비주얼 화면 출력 기능
   function showVisual(){
   let html = "";
+  VISUAL_ARR.forEach(function(item){
+     const tag = `
+     <div class="swiper-slide">
+     <div class="visual-slide-page">
+     <a href = "${item.link}">
+     <img src="../images/${item.pic}" alt="${item.name}"/>
+     </a>
+     </div>
+     </div>
+     `;
+     html += tag
+  });
+  visualTag.innerHTML = html;
+  //비주얼 슬라이드 기능
+  const swVisual = new Swiper(".sw-visual" ,{
+    loop:true, 
+    navigation:{
+      prevEl:".visual-prev",
+      nextEl:".visual-next"
+    },
+    autoplay:{
+      delay:2500,
+      disableOnInteraction: false,
+    },
+    pagination:{
+      el:".visual-pg",
+      type:"fraction"
+    }
+  }); 
+  //비주얼 슬라이드 멈춤 기능
+  const swVisualPlay = document.querySelector(".visual-play");
+  swVisualPlay.addEventListener("click" , function(){
+    //현재 active클래스 있는지를 확인하고 
+    //기능을 설정한다.
+    if(swVisualPlay.classList.contains("active")){
+      swVisual.autoplay.start();
+      swVisualPlay.classList.remove("active");
+    } else{
+      swVisual.autoplay.stop();
+      swVisualPlay.classList.add("active");
+    }
+  });
+}
 
-  }
-    // 펼침 목록들 보기 기능
+  // 오늘의 상품 화면 출력 기능
+   function showTodayGood(){
+    let htmlTop = "";
+    let htmlBottom = "";
+    const topArr = TODAY_GOOD.filter(function(item, index){
+      if(index < 4){
+        return item;
+      }
+    });
+    topArr.forEach(function(item){
+      let tag = `
+      <div class="good-box">
+      <!-- 제품이미지 -->
+      <a href="${item.link}" class="good-img">
+          <img src="../images/${item.pic}" alt="${item.name}"/>
+          <span class="good-type">${item.tag}</span>
+      </a>
+      <!-- 제품정보 -->
+      <a href="${item.link}" class="good-info">
+          <em>${item.name}</em>(<em>${item.unit}</em>)
+      </a>
+      <!-- 제품가격 -->
+      <a href="${item.link}" class="good-info-price">
+         ${priceToString(item.price)} <em>원</em>
+      </a>
+      <!-- 장바구니 이미지 -->
+      <button class="good-add-cart"></button>
+    </div>
+    `;
+    htmlTop += tag;
+    });
+    //배열의 밑부분 인덱스 4~7 까지 배열 만들기
+    const botArr = TODAY_GOOD.filter(function(item, index){
+      if(index > 3){
+        return item;
+      }
+    });
+    botArr.forEach(function(item){
+      let tag = `
+    <div class="good-box">
+    <!-- 제품이미지 -->
+    <a href="${item.link}" class="good-img">
+        <img src="../images/${item.pic}" alt="${item.name}"/>
+        <span class="good-type">${item.tag}</span>
+    </a>
+    <!-- 제품정보 -->
+    <a href="${item.link}" class="good-info">
+        <em>${item.name}</em>(<em>${item.unit}</em>)
+    </a>
+    <!-- 제품가격 -->
+    <a href="${item.link}" class="good-info-price">
+       ${priceToString(item.price)} <em>원</em>
+    </a>
+    <!-- 장바구니 이미지 -->
+    <button class="good-add-cart"></button>
+  </div>
+  `;
+   htmlBottom += tag; 
+    })
+    todayTag.innerHTML = htmlTop;
+    todayTag2.innerHTML = htmlBottom;
+   }
+  // 펼침 목록들 보기 기능
   // 더보기 목록기능
   const menuBt = document.getElementById("menu-bt");
   const menuList = document.getElementById("menu-list");
