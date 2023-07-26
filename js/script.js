@@ -31,9 +31,16 @@ xhttp.onreadystatechange = function (event) {
     //
     VISUAL_ARR = obj.visual;
     TODAY_GOOD = obj.todaygood;
+    SALE_GOOD = obj.salegood;
+    NEW_GOOD = obj.newgood;
     // 비주얼 화면에 배치한다
     showVisual();
+    //오늘의 상품을 화면에 배치
     showTodayGood();
+    //할인 상품을 화면에 배치
+    showSaleGood();
+    //신상품을 화면에 배치
+    showNewGood();
   }
 };
 // 자료를 호출한다.
@@ -41,6 +48,7 @@ console.log("자료를 가져온다. XMLHT.....");
 xhttp.open("GET", "data.json");
 // 웹브라우저 기능을 실행 할수 있도록 요청
 xhttp.send();
+// ============================================
 //비주얼
    let VISUAL_ARR;
    let visualTag = document.getElementById("data-visual");
@@ -48,7 +56,16 @@ xhttp.send();
    let TODAY_GOOD;
    let todayTag = document.getElementById("data-today");
    let todayTag2 = document.getElementById("data-today2");
+  //할인 상품
+  let SALE_GOOD;
+  let saleTag = document.getElementById("data-sale");
+  //신상품
+  let NEW_GOOD;
+  let newTag = document.getElementById("data-new");
+  let newListTag = document.getElementById("data-new-list");
 
+
+  // --------------------------------------------------
   //  비주얼 화면 출력 기능
   function showVisual(){
   let html = "";
@@ -158,6 +175,84 @@ xhttp.send();
     todayTag.innerHTML = htmlTop;
     todayTag2.innerHTML = htmlBottom;
    }
+   //할인상품 화면 출력 기능
+    function showSaleGood(){
+      let html = `
+      <div class = "swiper sw-sale">
+      <div class = "swiper-wrapper">
+      `;
+      SALE_GOOD.forEach(function(item){
+        let tag = `
+        <div class= "swiper-slide">
+        <div class="good-box">
+      <!-- 제품이미지 -->
+      <a href="${item.link}" class="good-img">
+          <img src="../images/${item.pic}" alt="${item.name}"/>
+          <span class="good-type">${item.tag}</span>
+      </a>
+      <!-- 제품정보 -->
+      <a href="${item.link}" class="good-info">
+          <em>${item.name}</em>(<em>${item.unit}</em>)
+      </a>
+      <!-- 제품가격 -->
+      <a href="${item.link}" class="good-info-price">
+         ${priceToString(item.price)} <em>원</em>
+      </a>
+      <!-- 장바구니 이미지 -->
+      <button class="good-add-cart"></button>
+      </div>
+      </div>
+        `;
+        html += tag;
+      });
+      html += `
+        </div>
+        </div>
+        `;
+        saleTag.innerHTML = html;
+        const swSale = new Swiper(".sw-sale" , {
+          slidesPerView: 3,
+          spaceBetween: 16,
+          slidesPerGroup: 3,
+          navigation:{
+            prevEl: ".sale .slide-prev",
+            nextEl: ".sale .slide-next"
+          },
+          pagination:{
+            el:".sale .slide-pg",
+            type: "fraction",
+          },
+        });
+    }
+    //신상품 화면 출력 기능
+    function showNewGood(){
+      //첫번째 화면 출력
+      let obj = NEW_GOOD[0];
+      let newGoodFirst = `
+      <a href = "${obj.link}" class= "new-img">
+      <img src="../images/${obj.pic}" alt="${obj.title}"/>
+      </a>
+      <a href = "${obj.link}" class= "new-title">
+      ${obj.title}
+      </a>
+      <a href = "${obj.link}" class= "new-txt">
+      ${obj.txt}
+      </a>
+      `;
+      newTag.innerHTML = newGoodFirst;
+      //나머지 출력 1~4번
+      let html = "";
+      NEW_GOOD.forEach(function(item,index){
+        let tag = "";
+        //0번은 출력했으므로
+        if(index !== 0){
+          tag=`
+          
+          `
+        }
+      })
+    }
+   //--------------------------------------------------
   // 펼침 목록들 보기 기능
   // 더보기 목록기능
   const menuBt = document.getElementById("menu-bt");
