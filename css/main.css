@@ -45,16 +45,16 @@ body {
   margin: 0 auto;
 }
 /* swiper 기본 셋팅 */
-.swiper{
+.swiper {
   width: 100%;
   height: 100%;
 }
 /* section 레이아웃 공통 패딩 */
-.wrap > section{
+.wrap > section {
   padding: 80px 0;
 }
 /* 타이틀 레이아웃 */
-.section-title{
+.section-title {
   position: relative;
   display: block;
   font-size: 32px;
@@ -63,13 +63,13 @@ body {
   font-weight: 400;
   margin-bottom: 20px;
 }
-.section-title b{
+.section-title b {
   font-weight: 700;
 }
-.section-bar{
+.section-bar {
   padding-bottom: 15px;
 }
-.section-bar::after{
+.section-bar::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -78,12 +78,12 @@ body {
   height: 2px;
   background-color: #707070;
 }
-.section-title-txt{
+.section-title-txt {
   position: relative;
   display: block;
   margin-bottom: 20px;
 }
-.section-bt{
+.section-bt {
   position: relative;
   display: block;
   width: 114px;
@@ -94,19 +94,19 @@ body {
   background-color: #fff;
   color: #666;
   font-size: 13px;
-  transition: background .5s;
+  transition: background 0.5s;
 }
-.section-bt:hover{
+.section-bt:hover {
   background: #f9f9f9;
 }
-.slide-control{
+.slide-control {
   position: relative;
   display: block;
   width: 140px;
   margin-top: 0;
 }
 .slide-prev,
-.slide-next{
+.slide-next {
   position: absolute;
   top: 0;
   width: 26px;
@@ -116,21 +116,21 @@ body {
   font-size: 0;
   background: transparent;
 }
-.slide-prev{
+.slide-prev {
   background: url("../images/swiperArrP.png") no-repeat;
   left: 0;
 }
-.slide-prev:hover{
+.slide-prev:hover {
   background-position: 0px -20px;
 }
-.slide-next{
+.slide-next {
   background: url("../images/swiperArrN.png") no-repeat;
   right: 0;
 }
-.slide-next:hover{
+.slide-next:hover {
   background-position: 0px -20px;
 }
-.slide-pg{
+.slide-pg {
   position: relative;
   display: block;
   text-align: center;
@@ -623,11 +623,11 @@ body {
   line-height: 19px;
   vertical-align: 5px;
 }
-.more-menu-bt.active{
+.more-menu-bt.active {
   display: none;
 }
-.more-menu-bt.active::after{
-  content: '접기';
+.more-menu-bt.active::after {
+  content: "접기";
 }
 .more-menu-icon {
   display: inline-block;
@@ -713,7 +713,7 @@ body {
   font-weight: 700;
 }
 /* 비주얼 */
-.visual{
+.visual {
   position: relative;
   display: block;
   width: 100%;
@@ -721,39 +721,39 @@ body {
   padding: 0;
   overflow: hidden;
 }
-.visual-slide{
+.visual-slide {
   position: relative;
   display: block;
   width: 100%;
   height: 100%;
 }
-.swiper-slide{
+.swiper-slide {
   position: relative;
   display: block;
   width: 100%;
   height: 100%;
 }
-.visual-slide-page{
+.visual-slide-page {
   position: relative;
   display: block;
   width: 100%;
   height: 100%;
 }
-.visual-slide-page a{
+.visual-slide-page a {
   position: relative;
   display: block;
   width: 100%;
   height: 100%;
   text-align: center;
 }
-.visual-slide-page a img{
+.visual-slide-page a img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 /* 슬라이드 이전 다음 버튼 */
 .visual-prev,
-.visual-next{
+.visual-next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -766,28 +766,28 @@ body {
   font-size: 0;
   cursor: pointer;
 }
-.visual-prev{
+.visual-prev {
   left: calc(50% - 600px);
   /* left: 50%; */
-  background: rgba(0,0,0,0) url("../images/visualArrP.png") no-repeat;
+  background: rgba(0, 0, 0, 0) url("../images/visualArrP.png") no-repeat;
   background-position: 0px -64px;
   /* z-index: 9999; */
 }
-.visual-prev:hover{
-  background: rgba(0,0,0,0.3) url("../images/visualArrP.png") no-repeat;
+.visual-prev:hover {
+  background: rgba(0, 0, 0, 0.3) url("../images/visualArrP.png") no-repeat;
   background-position: 0px 0px;
 }
-.visual-next{
+.visual-next {
   right: calc(50% - 600px);
-  background: rgba(0,0,0,0) url("../images/visualArrN.png") no-repeat;
+  background: rgba(0, 0, 0, 0) url("../images/visualArrN.png") no-repeat;
   background-position: 0px -64px;
 }
-.visual-next:hover{
-  background: rgba(0,0,0,0.3) url("../images/visualArrN.png") no-repeat;
+.visual-next:hover {
+  background: rgba(0, 0, 0, 0.3) url("../images/visualArrN.png") no-repeat;
   background-position: 0px 0px;
 }
 /* 콘트롤러 */
-.visual-control{
+.visual-control {
   position: relative;
   bottom: 43px;
   z-index: 999;
@@ -795,7 +795,7 @@ body {
   display: block;
   /* width: 500px; */
 }
-.visual-play{
+.visual-play {
   position: relative;
   display: block;
   width: 30px;
@@ -806,10 +806,10 @@ body {
   border: 0;
   float: left;
 }
-.visual-play.active{
+.visual-play.active {
   background-position: 0px -30px;
 }
-.visual-pg{
+.visual-pg {
   position: relative;
   display: block;
   width: 52px !important;
@@ -827,7 +827,7 @@ body {
   letter-spacing: -1px;
   text-indent: 3px;
 }
-.visual-more{
+.visual-more {
   position: relative;
   display: block;
   width: 29px;
@@ -839,37 +839,37 @@ body {
   float: left;
 }
 /* 오늘의 상품 */
-.today{
+.today {
   position: relative;
   display: block;
 }
-.good-wrap{
+.good-wrap {
   position: relative;
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
 }
-.good-box{
+.good-box {
   position: relative;
   display: block;
   width: 290px;
   height: 410px;
   background-color: #fff;
 }
-.good-img{
+.good-img {
   position: relative;
   display: block;
   width: 100%;
   height: 290px;
   overflow: hidden;
 }
-.good-img > img{
-  transition: transform .5s;
+.good-img > img {
+  transition: transform 0.5s;
 }
-.good-img:hover > img{
+.good-img:hover > img {
   transform: scale(1.1);
 }
-.good-type{
+.good-type {
   position: absolute;
   top: 0;
   right: 0;
@@ -882,7 +882,7 @@ body {
   font-size: 14px;
   font-weight: 500;
 }
-.good-info{
+.good-info {
   position: relative;
   display: block;
   width: 100%;
@@ -891,10 +891,10 @@ body {
   font-size: 17px;
   color: #000;
 }
-.good-info em{
+.good-info em {
   font-style: normal;
 }
-.good-info-price{
+.good-info-price {
   position: relative;
   display: block;
   width: 100%;
@@ -903,11 +903,11 @@ body {
   color: #000;
   font-weight: 500;
 }
-.good-info-price em{
+.good-info-price em {
   font-size: 17px;
   font-style: normal;
 }
-.good-add-cart{
+.good-add-cart {
   position: absolute;
   right: 23px;
   bottom: 32px;
@@ -918,92 +918,92 @@ body {
   border: 0;
   cursor: pointer;
 }
-.no-mb{
+.no-mb {
   margin-bottom: 0;
 }
 /* 섹션 레이아웃 */
-.layout-wrap{
+.layout-wrap {
   position: relative;
   display: block;
 }
-.layout-left{
+.layout-left {
   position: relative;
   display: block;
   width: calc(100% - 900px);
   float: left;
 }
-.layout-right{
+.layout-right {
   position: relative;
   display: block;
   width: 900px;
   float: right;
 }
-.good-slide{
+.good-slide {
   position: relative;
   display: block;
 }
 /* 알뜰 상품 */
-.sale{
+.sale {
   position: relative;
   display: block;
   background-color: #edf9f9;
 }
-.sale .slide-control{
+.sale .slide-control {
   margin-top: 100px;
 }
 /* 신상품 */
-.new{
+.new {
   position: relative;
   display: block;
 }
-.new .section-bt{
+.new .section-bt {
   position: absolute;
   right: 0;
   bottom: 0;
 }
-.new-wrap{
+.new-wrap {
   position: relative;
   display: block;
   border-bottom: 1px solid #eee;
   padding-bottom: 50px;
 }
-.new-left{
+.new-left {
   position: relative;
   display: block;
   width: calc(50% - 8px);
   float: left;
 }
-.new-img{
+.new-img {
   position: relative;
   display: block;
   height: 370px;
   margin-bottom: 20px;
   overflow: hidden;
 }
-.new-title{
+.new-title {
   position: relative;
   display: block;
   margin-bottom: 10px;
   font-size: 25px;
   font-weight: 700;
 }
-.new-txt{
+.new-txt {
   position: relative;
   display: block;
   font-size: 17px;
 }
-.new-right{
+.new-right {
   position: relative;
   display: block;
   width: calc(50% - 8px);
   float: right;
 }
-.new-box{
+.new-box {
   position: relative;
   display: block;
   width: calc(50% - 8px);
 }
-.new-box-img{
+.new-box-img {
   position: relative;
   display: block;
   width: 100%;
@@ -1011,14 +1011,14 @@ body {
   overflow: hidden;
   margin-bottom: 15px;
 }
-.new-box-img img{
+.new-box-img img {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   width: 102%;
 }
-.new-box-title{
+.new-box-title {
   position: relative;
   display: block;
   font-size: 17px;
@@ -1030,35 +1030,35 @@ body {
   margin-bottom: 10px;
 }
 /* 홀수는 float:left */
-.new-right .new-box:nth-child(2n+1){
+.new-right .new-box:nth-child(2n + 1) {
   float: left;
 }
 /* 짝수는 float:right */
-.new-right .new-box:nth-child(2n){
-  float:right;
+.new-right .new-box:nth-child(2n) {
+  float: right;
 }
-.recommend{
+.recommend {
   position: relative;
   display: block;
   background-color: #fff8fa;
 }
-.recommend .section-title-txt{
+.recommend .section-title-txt {
   font-size: 17px;
   border-bottom: 2px solid #76bd42;
   display: inline-block;
 }
-.blue{
+.blue {
   color: #76bd42;
 }
 /* 인기물품 */
-.popular{
+.popular {
   position: relative;
   display: block;
 }
-.popular-more{
+.popular-more {
   position: absolute;
   right: 0;
-  bottom:0;
+  bottom: 0;
   height: 34px;
   padding: 0 20px;
   border: 1px solid #bbb;
@@ -1069,67 +1069,67 @@ body {
   font-size: 13px;
   transition: background 0.5s;
 }
-.popular-more:hover{
+.popular-more:hover {
   background: #f9f9f9;
 }
-.popular-cate{
+.popular-cate {
   display: block;
   position: relative;
   margin-bottom: 40px;
   /* background-color: #ff9933; */
 }
-.popular-slide-prev, 
-.popular-slide-next{
+.popular-slide-prev,
+.popular-slide-next {
   position: relative;
   display: block;
   width: 80px;
   height: 140px;
   background-color: #fff;
 }
-.popular-slide-prev{
+.popular-slide-prev {
   float: left;
 }
-.popular-slide-prev span{
+.popular-slide-prev span {
   position: absolute;
   left: 0;
-  top:50%;
+  top: 50%;
   transform: translateY(-50%);
   width: 26px;
   height: 20px;
-  background: url("../images/swiperArrP.png")no-repeat;
+  background: url("../images/swiperArrP.png") no-repeat;
   background-position: 0px 0px;
   font-size: 0;
   cursor: pointer;
 }
-.popular-slide-prev span:hover{
+.popular-slide-prev span:hover {
   background-position: 0px -20px;
 }
-.popular-slide-next{
+.popular-slide-next {
   float: right;
 }
-.popular-slide-next span{
+.popular-slide-next span {
   position: absolute;
   right: 0;
-  top:50%;
+  top: 50%;
   transform: translateY(-50%);
   width: 26px;
   height: 20px;
-  background: url("../images/swiperArrN.png")no-repeat;
+  background: url("../images/swiperArrN.png") no-repeat;
   background-position: 0px 0px;
   font-size: 0;
   cursor: pointer;
 }
-.popular-slide-next span:hover{
+.popular-slide-next span:hover {
   background-position: 0px -20px;
 }
-.popular-slide{
+.popular-slide {
   position: relative;
   display: block;
   width: calc(100% - 80px - 80px);
-  height:140px;
+  height: 140px;
   float: left;
 }
-.popular-slide a{
+.popular-slide a {
   position: relative;
   display: block;
   width: 140px;
@@ -1140,11 +1140,11 @@ body {
   border: 1px solid rgba(0, 0, 0, 0);
   transition: all 0.3s;
 }
-.popular-slide a:hover{
+.popular-slide a:hover {
   background-color: #fff;
   border: 1px solid #76bd42;
 }
-.popular-cate-icon{
+.popular-cate-icon {
   position: relative;
   display: block;
   width: 65px;
@@ -1152,7 +1152,7 @@ body {
   overflow: hidden;
   margin: 20px auto;
 }
-.popular-cate-name{
+.popular-cate-name {
   position: relative;
   display: block;
   font-size: 17px;
@@ -1160,19 +1160,19 @@ body {
   white-space: nowrap;
 }
 /* 브랜드 관 */
-.brand{
+.brand {
   position: relative;
   display: block;
   background-color: #f3f9f0;
 }
-.brand .slide-control{
+.brand .slide-control {
   margin-top: 25px;
 }
-.brand-slide{
+.brand-slide {
   position: relative;
   display: block;
 }
-.brand-box{
+.brand-box {
   position: relative;
   display: block;
   width: 285px;
@@ -1182,11 +1182,11 @@ body {
   display: block;
   text-align: center;
 }
-.brand-box a img{
+.brand-box a img {
   position: relative;
   display: inline-block;
 }
-.brand-box a p{
+.brand-box a p {
   position: relative;
   display: block;
   font-size: 18px;
@@ -1194,27 +1194,27 @@ body {
   padding-top: 20px;
   padding-bottom: 40px;
 }
-.brand-info{
+.brand-info {
   position: relative;
   display: block;
 }
-.brand-info > li{
+.brand-info > li {
   position: relative;
   display: block;
   width: 50%;
   border-right: 1px solid #e3e3e3;
   float: left;
 }
-.brand-info > li:last-child{
+.brand-info > li:last-child {
   border-right: 0;
 }
-.brand-info-title{
+.brand-info-title {
   text-align: center;
   font-size: 16px;
-  color:#666;
+  color: #666;
   margin: 5px 0;
 }
-.brand-info-value{
+.brand-info-value {
   position: relative;
   display: block;
   font-size: 17px;
@@ -1260,36 +1260,36 @@ body {
   background-position: 0 -34px;
 }
 /* 제철요리 */
-.season{
+.season {
   position: relative;
   display: block;
 }
-.season-wrap{
+.season-wrap {
   position: relative;
   display: block;
 }
-.season-left{
+.season-left {
   position: relative;
   display: block;
   width: 790px;
   height: 420px;
   float: left;
 }
-.season-left a{
+.season-left a {
   position: relative;
   display: block;
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
-.season-left a img{
+.season-left a img {
   position: absolute;
   left: 50%;
-  top:50%;
+  top: 50%;
   transform: translate(-50%, -50%);
   display: block;
 }
-.season-info{
+.season-info {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -1297,7 +1297,7 @@ body {
   font-size: 0;
   letter-spacing: 0;
 }
-.season-info h3{
+.season-info h3 {
   position: relative;
   display: inline-block;
   width: 150px;
@@ -1309,29 +1309,29 @@ body {
   padding: 95px 15px 25px 15px;
   vertical-align: -10px;
 }
-.season-info p{
+.season-info p {
   position: relative;
   display: inline-block;
   width: 430px;
   height: 150px;
-  background-color: rgba(255,255,255, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 40px 30px;
   white-space: nowrap;
 }
-.season-info p span{
+.season-info p span {
   position: relative;
   display: block;
   font-size: 25px;
   color: #333;
   margin-bottom: 20px;
 }
-.season-info p b{
+.season-info p b {
   position: relative;
   display: block;
   font-size: 30px;
   font-weight: 700;
 }
-.season-right{
+.season-right {
   position: relative;
   display: block;
   width: calc(100% - 790px - 70px);
@@ -1346,52 +1346,52 @@ body {
 .scrollbar-track {
   background: rgba(222, 222, 222, 0) !important;
 }
-.season-list{
+.season-list {
   position: relative;
   display: block;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
   padding-bottom: 15px;
 }
-.season-good-list{
+.season-good-list {
   position: relative;
   display: block;
   width: 100%;
   height: calc(85px * 3);
   overflow: auto;
 }
-.season-good-list li{
+.season-good-list li {
   position: relative;
   display: block;
 }
-.season-good{
+.season-good {
   position: relative;
   display: block;
   height: 70px;
   margin-bottom: 15px;
 }
-.season-good-check{
+.season-good-check {
   position: absolute;
-  top:0;
+  top: 0;
   left: -200000px;
   display: block;
 }
-.season-label{
+.season-label {
   position: absolute;
   display: block;
   left: 0;
-  top:50%;
+  top: 50%;
   transform: translateY(-50%);
-  background: url("../images/inpCheck.png")no-repeat;
+  background: url("../images/inpCheck.png") no-repeat;
   width: 18px;
   height: 18px;
   font-size: 0;
   background-position: 0px 0px;
 }
-.season-good-check:checked + .season-label{
+.season-good-check:checked + .season-label {
   background-position: 0px -36px;
 }
-.season-good-img{
+.season-good-img {
   position: relative;
   display: block;
   width: 70px;
@@ -1400,19 +1400,19 @@ body {
   overflow: hidden;
   float: left;
 }
-.season-good-img > img{
+.season-good-img > img {
   position: absolute;
   left: 50%;
-  top:50%;
+  top: 50%;
   transform: translate(-50%, -50%);
 }
-.season-good-info{
+.season-good-info {
   position: relative;
   display: block;
   padding: 10px 20px;
   float: left;
 }
-.season-good-title{
+.season-good-title {
   position: relative;
   display: block;
   font-size: 15px;
@@ -1422,17 +1422,17 @@ body {
   display: block;
   font-size: 13px;
 }
-.season-good-price em{
+.season-good-price em {
   position: relative;
   display: inline-block;
   font-style: normal;
   font-size: 20px;
 }
-.season-total{
+.season-total {
   display: block;
   position: relative;
 }
-.season-good-total{
+.season-good-total {
   display: block;
   position: relative;
   padding-left: 40px;
@@ -1440,10 +1440,10 @@ body {
   color: #000;
   margin: 30px 0;
 }
-.season-good-total em{
+.season-good-total em {
   font-style: normal;
 }
-.buy-good{
+.buy-good {
   position: relative;
   display: block;
   border: 1px solid #ddd;
@@ -1451,6 +1451,264 @@ body {
   font-size: 20px;
   padding: 18px 0;
 }
-.buy-good em{
+.buy-good em {
   font-style: normal;
+}
+/* 이용 후기 */
+.review {
+  position: relative;
+  display: block;
+  background-color: #fcf6f2;
+}
+.review .slide-control {
+  margin-top: 25px;
+}
+.review-slide {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 235px;
+}
+.review-box {
+  position: relative;
+  display: block;
+  width: 290px;
+  height: 100%;
+  background-color: #fff;
+  padding: 20px;
+}
+.review-box a {
+  position: relative;
+  display: block;
+}
+.review-box-desc {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 66px;
+  margin-bottom: 15px;
+}
+.review-box-title {
+  position: relative;
+  display: block;
+  font-size: 17px;
+  /* 말줄임 */
+  width: 165px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 5px;
+}
+.review-box-star{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 20px;
+  font-size: 17px;
+  font-weight: 500;
+  padding-left: 25px;
+}
+.review-box-star::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background: url("../images/icoRating.png")no-repeat;
+}
+.review-box-img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 66px;
+  height: 66px;
+  overflow: hidden;
+}
+.review-box-img img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.review-box-txt{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 70px;
+  font-size: 13px;
+  /* 2줄 말줄임 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin-bottom: 20px;
+}
+.review-box-user{
+ position: relative;
+ display: block;
+ font-size: 13px;
+
+}
+/* 커뮤니티 */
+/* 커뮤니티 */
+.community{
+  position: relative;
+  display: block;
+}
+.community-notice{
+  position: relative;
+  display: block;
+  width: calc(100% / 3);
+  padding: 0 40px;
+  float: left;
+}
+.community-notice > dl{
+  position: relative;
+  display: block;
+}
+.community-notice > dl > dt{
+   display: block;
+  position: relative;
+  padding: 0 10px;
+  float: left;
+}
+.community-notice > dl > dt:nth-child(1){
+  padding-left: 0;
+}
+.community-notice > dl > dt:nth-child(1)::after{
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 1px;
+  height: 8px;
+  background-color: #e5e5e5;
+}
+.community-bt{
+  position: relative;
+  display: block;
+  border: 0;
+  cursor: pointer;
+  background: transparent;
+}
+.community-bt-active{
+  color: #000;
+  font-weight: 700;
+}
+.community-info{
+  position: relative;
+  display: block;
+  width: calc(100% / 3);
+  float: left;
+  padding: 0 40px;
+}
+.community-info h3{
+  position: relative;
+  display: block;
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.tel{
+  position: relative;
+  display: block;
+  font-size: 32px;
+  color: #76bd42;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.community-info-list{
+  position: relative;
+  display: block;
+}
+.community-info-list li{
+  position: relative;
+  display: block;
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.t1{
+  color: #666;
+}
+.t2{
+  color: #000;
+}
+.t3{
+  color: #000;
+}
+.community-info-list > li> a{
+  font-weight: 700;
+}
+.community-info-list > li> b{
+  font-weight: 700;
+}
+.community-help{
+  position: relative;
+  display: block;
+  width: calc(100% / 3);
+  float: left;
+  padding: 0 40px;
+}
+.community-help h3{
+  position: relative;
+  display: block;
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.community-help-list{
+  position: relative;
+  display: block;
+}
+.community-help-list >li{
+  position: relative;
+  display: block;
+  width: calc(50% - 5px);
+  margin-bottom: 10px;
+  /* background-color: #ff9933; */
+}
+.community-help-list >li:nth-child(2n+1){
+  float: left;
+}
+.community-help-list >li:nth-child(2n){
+  float: right;
+}
+.community-help-list >li> a{
+  position: relative;
+  display: block;
+  width: 100%;
+  border: 1px solid #e5e5e5;
+  padding: 0 12px;
+  line-height: 36px;
+  font-size: 13px;
+  color: #333;
+}
+.community-help-list >li >a::after{
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 12px;
+  background: url("../images/icoFaq.png") no-repeat;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+}
+.community-line::after{
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 1px;
+  height: 190px;
+  background-color: #ddd;
 }
