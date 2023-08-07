@@ -602,11 +602,11 @@ body {
   line-height: 19px;
   border-bottom: 2px solid rgba(0, 0, 0, 0);
 }
-.join-list > li > a:hover,
-.more-menu-list > li > a:hover {
+.join-list > li:hover,
+.more-menu-list > li:hover {
   font-weight: 600;
   color: #000;
-  border-bottom: 2px solid #000;
+  border-bottom: 1px solid #000;
 }
 .more-menu {
   position: relative;
@@ -623,12 +623,6 @@ body {
   line-height: 19px;
   vertical-align: 5px;
 }
-.more-menu-bt.active {
-  display: none;
-}
-.more-menu-bt.active::after {
-  content: "접기";
-}
 .more-menu-icon {
   display: inline-block;
   width: 10px;
@@ -638,13 +632,12 @@ body {
   margin-left: 3px;
   vertical-align: 2px;
 }
-.more-menu-bt.active {
+.more-menu.bt.active {
   color: #76bd42;
 }
 .more-menu-bt.active .more-menu-icon {
   background-position: 0px -6px;
 }
-
 .header-main-right {
   position: relative;
   display: block;
@@ -663,15 +656,15 @@ body {
   background-color: #f7f7f7;
   border-radius: 20px;
   padding-left: 20px;
-  padding-right: 45px;
+  padding-right: 40px;
   border: 1px solid #f7f7f7;
   line-height: 40px;
   font-size: 13px;
 }
 .search-txt:focus {
-  background-color: #fff;
+  background-color: #ffff;
   border: 1px solid #76bd42;
-  color: #000;
+  color: #0000;
 }
 .search-bt {
   position: absolute;
@@ -686,6 +679,7 @@ body {
   display: block;
   border: 0;
 }
+
 .bucket {
   position: relative;
   display: block;
@@ -1553,61 +1547,110 @@ body {
  font-size: 13px;
 
 }
+
 /* 커뮤니티 */
-/* 커뮤니티 */
-.community{
+.community {
   position: relative;
   display: block;
 }
-.community-notice{
+.community-notice {
   position: relative;
   display: block;
   width: calc(100% / 3);
+  /* background-color: #76bd42; */
   padding: 0 40px;
   float: left;
 }
-.community-notice > dl{
+.community-notice dl {
   position: relative;
   display: block;
 }
-.community-notice > dl > dt{
-   display: block;
+.community-notice dl > dt {
   position: relative;
+  display: block;
   padding: 0 10px;
   float: left;
 }
-.community-notice > dl > dt:nth-child(1){
+.community-notice dl > dt:nth-child(1) {
   padding-left: 0;
+  /* background-color: pink; */
 }
-.community-notice > dl > dt:nth-child(1)::after{
+.community-notice dl > dt:nth-child(1)::after {
   content: "";
   position: absolute;
   right: 0;
   top: 0;
   display: block;
   width: 1px;
-  height: 8px;
+  height: 18px;
   background-color: #e5e5e5;
 }
-.community-bt{
+.community-bt {
   position: relative;
   display: block;
   border: 0;
   cursor: pointer;
   background: transparent;
+  font-size: 20px;
+  color: #999;
 }
-.community-bt-active{
+.community-bt-active {
   color: #000;
   font-weight: 700;
 }
-.community-info{
+.community-notice > dl >dd{
+  position: absolute;
+  left: 0;
+  top:50px;
+  display: none;
+  width: 100%;
+}
+.community-info {
   position: relative;
   display: block;
   width: calc(100% / 3);
-  float: left;
   padding: 0 40px;
+  float: left;
 }
-.community-info h3{
+.community-visible-active {
+  display: block !important;
+}
+.notice-list {
+  position: relative;
+  display: block;
+}
+.notice-list > li {
+  position: relative;
+  display: block;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+
+.notice-list > li > a {
+  position: relative;
+  display: block;
+  font-size: 13px;
+}
+
+.notice-list > li > a > span {
+  position: relative;
+  display: inline-block;
+  /* 말줄임 */
+  width: 240px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.notice-list > li > a > em {
+  position: relative;
+  display: inline-block;
+  width: calc(100% - 240px);
+  color: #999;
+  font-style: normal;
+  text-align: right;
+  vertical-align: 2px;
+}
+.community-info h3 {
   position: relative;
   display: block;
   color: #000;
@@ -1615,19 +1658,19 @@ body {
   font-weight: 700;
   margin-bottom: 20px;
 }
-.tel{
+.tel {
   position: relative;
   display: block;
   font-size: 32px;
   color: #76bd42;
-  font-weight: 700;
   margin-bottom: 15px;
+  font-weight: 700;
 }
-.community-info-list{
+.community-info-list {
   position: relative;
   display: block;
 }
-.community-info-list li{
+.community-info-list li {
   position: relative;
   display: block;
   font-size: 13px;
@@ -1635,29 +1678,29 @@ body {
   font-weight: 400;
   margin-bottom: 10px;
 }
-.t1{
+.t1 {
   color: #666;
 }
-.t2{
+.t2 {
   color: #000;
 }
-.t3{
+.t3 {
   color: #000;
 }
-.community-info-list > li> a{
+.community-info-list > li > a {
   font-weight: 700;
 }
-.community-info-list > li> b{
+.community-info-list > li > b {
   font-weight: 700;
 }
-.community-help{
+.community-help {
   position: relative;
   display: block;
   width: calc(100% / 3);
-  float: left;
   padding: 0 40px;
+  float: right;
 }
-.community-help h3{
+.community-help h3 {
   position: relative;
   display: block;
   color: #000;
@@ -1665,24 +1708,30 @@ body {
   font-weight: 700;
   margin-bottom: 20px;
 }
-.community-help-list{
+.community-notice > dl > dd {
+  position: absolute;
+  left: 0;
+  top: 50px;
+}
+.community-help-list {
   position: relative;
   display: block;
 }
-.community-help-list >li{
+.community-help-list > li {
   position: relative;
   display: block;
   width: calc(50% - 5px);
   margin-bottom: 10px;
-  /* background-color: #ff9933; */
+  /* background-color: #ececec; */
 }
-.community-help-list >li:nth-child(2n+1){
+.community-help-list > li:nth-child(2n + 1) {
   float: left;
 }
-.community-help-list >li:nth-child(2n){
+.community-help-list > li:nth-child(2n) {
   float: right;
 }
-.community-help-list >li> a{
+
+.community-help-list > li > a {
   position: relative;
   display: block;
   width: 100%;
@@ -1692,17 +1741,16 @@ body {
   font-size: 13px;
   color: #333;
 }
-.community-help-list >li >a::after{
+.community-help-list > li > a:after {
   content: "";
   position: absolute;
   width: 8px;
   height: 12px;
+  right: 10px;
+  top: 10px;
   background: url("../images/icoFaq.png") no-repeat;
-  top: 50%;
-  right: 12px;
-  transform: translateY(-50%);
 }
-.community-line::after{
+.community-line:after {
   content: "";
   position: absolute;
   right: 0;
@@ -1711,4 +1759,233 @@ body {
   width: 1px;
   height: 190px;
   background-color: #ddd;
+}
+/* 하단 */
+.footer{
+  position: relative;
+  display: block;
+}
+.family-box{
+  position: absolute;
+  left: 0;
+  bottom: calc(65px + 144px);
+  width: 100%;
+  height: 330px;
+  overflow: hidden;
+}
+.family{
+  position: absolute;
+  left: 0;
+  top: 100%;
+  display: block;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 40px 0;
+  visibility: hidden;
+  transition: top 0.5s , visibility 0.5s;
+}
+.family.active{
+  visibility: visible;
+  top: 0px;
+}
+.family-list{
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 50px);
+}
+.family-close{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  background: url("../images/btnFamilyClose.png")no-repeat center;
+  border:0;
+  font-size: 0;
+  cursor: pointer;
+}
+.family-title{
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22px;
+  color:#76bd42;
+  margin-bottom: 20px;
+}
+.family-area{
+  font-size:13px;
+  line-height: 22px;
+}
+.footer-top{
+  position: relative;
+  display: block;
+  border-top: 1px solid #f2f2f2;
+  background-color: #fff;
+}
+.footer-menu{
+  position: relative;
+  display: block;
+  padding: 20px 0;
+  float: left;
+}
+.footer-menu > li{
+  position: relative;
+  display: block;
+  float: left;
+  padding: 0 10px;
+}
+.footer-menu > li::after{
+  content: "";
+  position: absolute;
+  right: -1px;
+  top:50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 2px;
+  background-color: #a9b0b8;
+}
+.footer-menu > li:first-child{
+  padding-left: 0;
+}
+.footer-menu > li:last-child{
+  padding-right: 0;
+}
+.footer-menu > li:last-child::after{
+  content: none;
+}
+.footer-link.active{
+  background-color: #f5f5f5;
+}
+.footer-link{
+  position: relative;
+  display: block;
+  border: 0;
+  cursor: pointer;
+  background-color: #fff;
+  line-height: 64px;
+  float: right;
+  font-size: 13px;
+  color: #666;
+  padding: 0 15px;
+}
+.blank{
+  display: inline-block;
+  width: 30px;
+  height: 10px;
+}
+.footer-link::after{
+  content: "";
+  display: inline-block;
+  position: relative;
+  width: 12px;
+  height: 12px;
+  background: url("../images/btnMore.png") no-repeat;
+  vertical-align: 0;
+}
+
+.footer-main{
+  position: relative;
+  display: block;
+  border-top: 1px solid #f2f2f2;
+  padding: 20px 0;
+  background-color: #fff;
+}
+
+.footer-copy{
+  position: relative;
+  display: block;
+  float: left;
+}
+
+.copy-list{
+  position: relative;
+  display: block;
+}
+
+.copy-list > li{
+  position: relative;
+  display: block;
+  font-size: 13px;
+  line-height: 1;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.copy-list > li > span{
+  position: relative;
+  display: inline-block;
+  padding: 0 8px;
+}
+
+.copy-list > li > span::after{
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 1px;
+  height: 10px;
+  background-color: #e5e5e5;
+}
+
+.copy-list > li > span:first-child{
+  padding-left: 0;
+}
+
+.copy-list > li > span:last-child{
+  padding-left: 0;
+}
+
+.copy-list > li > span:last-child:after{
+  content: none;
+}
+
+.copy-txt{
+  position: relative;
+  display: block;
+  color: #999;
+  font-size: 11px;
+  margin-top: 20px;
+}
+
+.footer-sns{
+  position: relative;
+  display: block;
+  float: right;
+}
+.sns-list{
+  position: relative;
+  display: block;
+}
+.sns-list >li{
+  float: left;
+  padding:  0 5px;
+}
+.sns-list >li:first-child{
+  padding-left: 0;
+}
+.sns-list >li:last-child{
+  padding-left: 0;
+}
+.sns-list > li > a{
+  position: relative;
+  display: block;
+  width: 26px;
+  height: 26px;
+  background: url("../images/ftSns.png") no-repeat;
+}
+.is{
+  background-position: 0px -26px !important;
+}
+.fb{
+  background-position: 0px 0px !important;
+}
+.nb{
+  background-position: 0px calc(-26px *2)!important;
+}
+.yt{
+  background-position: 0px calc(-26px *3)!important;
+}
+.kk{
+  background-position: 0px calc(-26px *4)!important;
 }
