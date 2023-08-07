@@ -60,7 +60,7 @@ body {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 15px;
-  box-shadow: 0 4px 9px 0 rgb(0 0 0 / 10%);
+  box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 10%);
   padding: 15px 10px 29px 10px;
   overflow: hidden;
 }
@@ -133,7 +133,7 @@ body {
   font-size: 11px;
   background-color: #000;
   color: #fff;
-  text-overflow: uppercase;
+  text-transform: uppercase;
 }
 /* section 레이아웃 공통 패딩 */
 .wrap > section {

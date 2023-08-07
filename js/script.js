@@ -33,6 +33,7 @@ window.onload = function () {
     family.classList.remove("active");
     openBt.classList.remove("active");
   })
+  //위로가기 기능
   // ===============================================================
   // data.json을 로딩
   const xhttp = new XMLHttpRequest();
