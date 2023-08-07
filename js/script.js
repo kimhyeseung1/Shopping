@@ -34,6 +34,14 @@ window.onload = function () {
     openBt.classList.remove("active");
   })
   //위로가기 기능
+  const fixTopBt = document.querySelector(".fix-top")
+    fixTopBt.addEventListener("click" , function(){
+    window.scrollTo(0,0)
+      window.scrollTo({
+      top:0,
+      behavior:"smooth" , 
+    });
+  });
   // ===============================================================
   // data.json을 로딩
   const xhttp = new XMLHttpRequest();
